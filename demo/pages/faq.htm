@@ -2,143 +2,177 @@ title = "Demonstration"
 url = "/demo/faq"
 layout = "default"
 ==
-<div class="jumbotron">
-    <div class="container">
-        {% content "welcome.htm" %}
-    </div>
+<br>
+
+<div class="container">
+  <div class="faq-top card">
+  <img class="faq-top card-img-top img-fluid " src="{{ 'assets/images/620.jpeg'|theme }}" alt="Card image cap">
+  <div class="faq-top card-body text-center">
+    <h1 class="faq-top card-title">How Can We Help?</h1>
+  </div>
+  <p class="faq-top-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices elementum purus efficitur euismod. Morbi vehicula ullamcorper molestie. Morbi quis malesuada quam. Phasellus sit amet eros vel neque mollis congue. Phasellus pellentesque porttitor nisl, vehicula feugiat felis elementum vel. Praesent maximus massa ac sapien facilisis, vitae tincidunt nisl venenatis. Nulla ac turpis nisi. Curabitur venenatis, augue varius maximus tincidunt, diam risus vestibulum nisl, ut pretium ipsum ligula ut sem. In a nisl sed orci ultricies molestie. Aenean tellus sapien, dapibus placerat sem ac, vestibulum semper turpis. </p>
 </div>
+</div>
+<br>
+
+<div class="jumbotron jumbotron-fluid contact_req_form">
+    <h1 class="text-center">Call 0161 705 382 | Request a call below</h1>
+    <form class="contact_req text-center">
+        <div class="form-row contact_form">
+            <div class="col-sm-3">
+                <label class="sr-only" for="inlineFormInputName">Name</label>
+                <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Name">
+            </div>
+            <div class="col-sm-3">
+                <label class="sr-only" for="inlineFormInputGroupUsername">Phone Number</label>
+                <div class="input-group mb-2 mb-sm-0">
+                    <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">request a callback</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="float-sm">
+  <div class="fl-fl float-fb">
+    <i class="fa fa-facebook-square fa-2x"></i>
+    <a href="" target="_blank"> Like us!</a>
+  </div>
+  <div class="fl-fl float-tw">
+    <i class="fa fa-twitter-square fa-2x"></i>
+    <a href="" target="_blank">Follow us!</a>
+  </div>
+  <div class="fl-fl float-gp">
+    <i class="fa fa-youtube-square fa-2x"></i>
+    <a href="" target="_blank">Recommend us!</a>
+  </div>
+  <div class="fl-fl float-rs">
+    <i class="fa fa-linkedin-square fa-2x"></i>
+    <a href="" target="_blank">Connect us!</a>
+  </div>
+</div>
+<br>
 
 <div class="container">
 
-    <div class="page-header">
-        <h2>Overview <small>Basic concepts</small></h2>
+<div id="accordion" role="tablist">
+  <div class="faq card">
+    <div class="faq card-header" role="tab" id="faqOne">
+      <h5 class="mb-0">
+        <img src="{{ 'assets/images/080.png'|theme }}" >
+        <a class="faq" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <i class="faq fa fa-plus-square fa-3x" aria-hidden="true"></i>
+        </a>
+
+      </h5>
     </div>
-    <p>
-        This page demonstrates the basic CMS features.
-        Usually each page built with October is a combination of a layout, page, partials and content blocks,
-        although in simple cases you can just use a page without anything else.
-    </p>
 
-    <!-- Layouts -->
-    <h3>Layouts</h3>
-    <p class="lead">
-        <i class="icon-th-large"></i> &nbsp; Layouts define the page scaffold.
-    </p>
-    <p>
-        The layout file <code>layouts/default.htm</code> defines the page scaffold &mdash;
-        everything that repeats on each page, such as the HTML, HEAD and BODY tags, StyleSheet and JavaScript references.
-    </p>
-    <p>The page menu and footer in the Demo theme are defined in the layout as well.</p>
-
-    <hr />
-
-    <!-- Pages -->
-    <h3>Pages</h3>
-    <p class="lead">
-        <i class="icon-copy"></i> &nbsp; Pages hold the content for each URL.
-    </p>
-    <p>
-        The page file <code>pages/home.htm</code> defines the page URL (<code>/</code> for this page) and the page content.
-        Pages are rendered inside layouts with this function that should be called in the layout code:
-    </p>
-    <pre>{{ "{% page %}" }}</pre>
-    <p>Using a layout for pages is optional &mdash; you can define everything right in the page file.</p>
-
-    <hr />
-
-    <!-- Partials -->
-    <h3>Partials</h3>
-    <p class="lead">
-        <i class="icon-tags"></i> &nbsp; Partials contain reusable chunks of HTML markup.
-    </p>
-    <p>
-        Partials are chunks of HTML defined in separate files that can be included anywhere.
-        Partials are rendered with:
-    </p>
-    <pre>{{ "{% partial \"partial-name\" %}" }}</pre>
-    <p>You may place partials inside folders too. In this example we placed the footer content to the <code>partials/site/footer.htm</code> partial.</p>
-    <pre>{{ "{% partial \"site/footer\" %}" }}</pre>
-    <p>Partials can be used inside pages, layouts or other partials.</p>
-
-    <hr />
-
-    <!-- Content blocks -->
-    <h3>Content blocks</h3>
-    <p class="lead">
-        <i class="icon-font"></i> &nbsp; Content blocks are text or HTML blocks that can be edited separately from the page or layout.
-    </p>
-    <p>
-        The introductory text used on this page is defined in the <code>content/welcome.htm</code> file.
-        Content blocks are defined and rendered with:
-        <pre>{{ "{% content \"content-name.htm\" %}" }}</pre>
-    </p>
-
-    <hr />
-
-    <!-- Placeholders -->
-    <h3>Placeholders</h3>
-    <p class="lead">
-        <i class="icon-bookmark"></i> &nbsp; Placeholders allow pages to inject content to a layout.
-    </p>
-    <p>
-        The common use is injecting page-specific links to StyleSheet or JavaScript files to the HEAD tag defined in the layout.
-        Placeholders are defined in the layout file and they have names so that they can be referred in the page.
-        Example:
-    </p>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 20rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 20rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-</div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 20rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="faqOne" data-parent="#accordion">
+      <div class="faq card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
   </div>
+
+  <div class="faq card">
+    <div class="faq card-header" role="tab" id="faq">
+      <h5 class="mb-0">
+        <img src="{{ 'assets/images/080.png'|theme }}" >
+        <a class="faq" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <i class="faq fa fa-plus-square fa-3x" aria-hidden="true"></i>
+        </a>
+
+      </h5>
+    </div>
+
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="faqOne" data-parent="#accordion">
+      <div class="faq card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq card">
+    <div class=" faq card-header" role="tab" id="faq">
+      <h5 class="mb-0">
+        <img src="{{ 'assets/images/080.png'|theme }}" >
+        <a class="faq" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <i class="faq fa fa-plus-square fa-3x" aria-hidden="true"></i>
+        </a>
+
+      </h5>
+    </div>
+
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="faqOne" data-parent="#accordion">
+      <div class="faq card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq card">
+    <div class="faq card-header" role="tab" id="faq">
+      <h5 class="mb-0">
+        <img src="{{ 'assets/images/080.png'|theme }}" >
+        <a class="faq" data-toggle="collapse" href="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <i class="faq fa fa-plus-square fa-3x" aria-hidden="true"></i>
+        </a>
+
+      </h5>
+    </div>
+
+    <div id="collapsefour" class="collapse" role="tabpanel" aria-labelledby="faqOne" data-parent="#accordion">
+      <div class="faq card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq card">
+    <div class="faq card-header" role="tab" id="faq">
+      <h5 class="mb-0">
+        <img src="{{ 'assets/images/080.png'|theme }}" >
+        <a class="faq" data-toggle="collapse" href="#collapsefive" aria-expanded="true" aria-controls="collapseOne">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <i class="faq fa fa-plus-square fa-3x" aria-hidden="true"></i>
+        </a>
+
+      </h5>
+    </div>
+
+    <div id="collapsefive" class="collapse" role="tabpanel" aria-labelledby="faqOne" data-parent="#accordion">
+      <div class="faq card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq card">
+    <div class="faq card-header" role="tab" id="faq">
+      <h5 class="mb-0">
+        <img src="{{ 'assets/images/080.png'|theme }}" >
+        <a class="faq" data-toggle="collapse" href="#collapsesix" aria-expanded="true" aria-controls="collapseOne">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <i class="faq fa fa-plus-square fa-3x" aria-hidden="true"></i>
+        </a>
+
+      </h5>
+    </div>
+
+    <div id="collapsesix" class="collapse" role="tabpanel" aria-labelledby="faqOne" data-parent="#accordion">
+      <div class="faq card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
 </div>
-        </div>
-        
-    </div>
-
-    <hr />
-
-    <!-- Assets -->
-    <h3>Assets</h3>
-    <p class="lead">
-        <i class="icon-picture"></i> &nbsp; Assets are resource files like images and stylesheets.
-    </p>
-    <p>This theme stores its asset files (JavaScript, StyleSheet, images, fonts, etc) in the <code>themes/demo/assets</code> directory. This theme is also packaged with these useful 3rd party tools:</p>
-    <ul class="list-inline">
-        <li><a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
-        <li><a target="_blank" href="http://fontawesome.io/3.2.1/">Font Awesome</a></li>
-        <li><a target="_blank" href="http://www.google.com/fonts/specimen/Lato">Lato webfont</a></li>
-    </ul>
-    <p>You might prefer to remove them for your website implementation.</p>
-
-    <br />
-
-    <div class="text-center">
-        <p><a href="{{ 'ajax'|page }}" class="btn btn-lg btn-default">Continue to AJAX framework</a></p>
-    </div>
-
 </div>
