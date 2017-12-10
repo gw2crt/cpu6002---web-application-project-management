@@ -1,0 +1,75 @@
+<footer id="footer">
+    <div class="container">
+        <div class="row upper_section">
+            <div class="col-md-3">
+                <h3>Contact Us...</h3>
+                <ul class="unstyled">
+                    <li>The Will Writing Partnership</li>
+                    <li>Imperial House</li>
+                    <li>Hornby Street</li>
+                    <li>Bury</li>
+                    <li>BL9 5BN</li>
+                    <li>0161 705 4382</li>
+                    <li>info@twp.co.uk</li>
+
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3>Services</h3>
+                <ul class="unstyled">
+                    <li><a href="{{ 'wills'|page }}">Wills</a></li>
+                    <li><a href="{{ 'funeral'|page }}">Funeral Plans</a></li>
+                    <li><a href="{{ 'inheritance'|page }}">Inheritance Tax </a></li>
+                    <li><a href="{{ 'probate'|page}}">Probate </a></li>
+                    <li><a href="{{ 'storage'|page }}">Storage </a></li>
+                    <li><a href="{{ 'trusts'|page }}">Trusts</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3>About Us</h3>
+                <ul class="unstyled">
+                    <li><a href="{{ 'history'|page }}">Company History</a></li>
+                    <li><a href="{{ 'glossary'|page }}">Glossary Of Terms</a></li>
+                    <li><a href="{{ 'trivia'|page }}">Trivia</a></li>
+                    <li><a href="{{ 'careers'|page }}">Careers</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3>Illum, tempori, saepe</h3>
+                <ul class="unstyled">
+                    <li><a href="#">Lorem ipsum dolor sit</a></li>
+                    <li><a href="#">Recusandae, culpa necessita nam</a></li>
+                    <li><a href="#">Cupiditate, debitis adipisci blandi</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<div class="lower_section">
+    <ul class="">
+        <li class="separator hidden-xs"></li>
+        <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Site map</a></li>
+        <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Terms and Conditions</a></li>
+        <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Privacy Policy</a></li>
+        <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Careers</a></li>
+        <li>&copy; TheWillWritingPartnership. All rights reserved.</li>
+        <ul>
+        <li>
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+        </li>
+        <li>
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+        </li>
+        <li>
+            <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+        </li>
+        <li>
+            <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        </li>
+        </ul>
+    </ul>
+</div>

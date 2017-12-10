@@ -1,0 +1,9 @@
+name: 'Project TWP'
+description: 'The Will Writing Project'
+author: 'Gareth Weston'
+homepage: 'http://139.59.165.140/test'
+code: vanilla
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - RainLab.Forum
